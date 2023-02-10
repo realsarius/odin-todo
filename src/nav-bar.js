@@ -51,6 +51,8 @@ navbarMiddle3.appendChild(navbarMiddle3Text);
 navbarMiddle4.appendChild(navbarMiddle4Icon);
 navbarMiddle4.appendChild(navbarMiddle4Text);
 
+// select board on load
+
 const navbarRight1 = document.createElement('i');
 const navbarRight2 = document.createElement('div');
 
@@ -100,5 +102,19 @@ navbarRight.appendChild(navbarRight2);
 navbar.appendChild(navbarLeft);
 navbar.appendChild(navbarMiddle);
 navbar.appendChild(navbarRight);
+
+navbarMiddle1.addEventListener('click', () => {
+  document.querySelector('#map').style.display = 'none';
+  document.querySelector('#board').style.display = 'grid';
+  navbarMiddle1.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+  navbarMiddle2.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
+});
+
+navbarMiddle2.addEventListener('click', () => {
+  document.querySelector('#map').style.display = 'grid';
+  document.querySelector('#board').style.display = 'none';
+  navbarMiddle1.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
+  navbarMiddle2.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+});
 
 export default navbar;
