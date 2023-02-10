@@ -11,6 +11,8 @@ import footer from './footer';
 import board from './board';
 import map from './map';
 
+import addProjectModal from './addProject';
+
 const root = document.querySelector('.root');
 const container = document.createElement('div');
 
@@ -23,6 +25,7 @@ container.appendChild(navbar);
 container.appendChild(main);
 container.appendChild(calendar);
 container.appendChild(footer);
+container.appendChild(addProjectModal);
 
 root.appendChild(container);
 document.querySelector('.navbarMiddle1').style.backgroundColor =
@@ -30,3 +33,9 @@ document.querySelector('.navbarMiddle1').style.backgroundColor =
 document.querySelector('.navbarMiddle1').style.boxShadow =
   '0 3px 0 #ff5761 inset';
 document.querySelector('#map').style.display = 'none';
+
+document.querySelector('#addProjectBtn').addEventListener('click', () => {
+  addProjectModal.showModal();
+});
+
+document.getElementById('#priorityLabel').style.display = 'none';

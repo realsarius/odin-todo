@@ -194,7 +194,6 @@ table {
   grid-area: cl;
 }
 .container footer {
-  background-color: red;
   grid-area: ft;
   height: 50px;
 }
@@ -227,7 +226,7 @@ table {
 }
 
 .container nav .navbar-right {
-  width: 230px;
+  width: 260px;
   display: flex;
   height: 100%;
   align-items: center;
@@ -244,6 +243,13 @@ table {
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.container nav .navbar-right .profile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 /* .container nav .navbar-right .profile .profile-info .name {
 
@@ -328,6 +334,7 @@ table {
 }
 #board #search #searchContent .filters {
   display: flex;
+  width: 200px;
   gap: 10px;
   align-items: center;
   justify-content: center;
@@ -365,7 +372,8 @@ table {
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
 }
-#board #search #searchContent #searchBar #searchBarInput:focus {
+#board #search #searchContent #searchBar #searchBarInput:focus,
+#board #search #searchContent #searchBar #searchBarInput:hover {
   background-color: rgba(255, 255, 255, 0.1);
   outline: none;
 }
@@ -378,7 +386,257 @@ table {
 #board #search #searchContent .searchRightSide :hover {
   cursor: pointer;
 }
-#board #todoArea {
-  background-color: green;
+#board #projectArea {
+  color: white;
+}
+
+#board #projectArea #projectContent {
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  /* grid-template-columns: repeat(55, 0fr); */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+#board #projectArea #projectContent > * {
+  width: 300px;
+  display: grid;
+  grid-template-rows: 0fr 1fr;
+  gap: 10px;
+  padding-right: 30px;
+}
+#board #projectArea #projectContent #todo {
+  display: grid;
+  grid-template-rows: repeat(55, 0fr);
+}
+#board #projectArea #projectContent .todo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: black;
+  padding: 15px;
+  background: rgb(108, 75, 138);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(108, 75, 138, 1) 0%,
+    rgba(102, 67, 134, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(108, 75, 138, 1) 0%,
+    rgba(102, 67, 134, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(108, 75, 138, 1) 0%,
+    rgba(102, 67, 134, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6c4b8a",endColorstr="#664386",GradientType=1);
+
+  outline: 1px solid rgba(163, 163, 163, 0.582);
+}
+#board #projectArea #projectContent .todo h1 {
+  font-weight: 600;
+}
+#board #projectArea #projectContent .todo .todo1desc {
+  line-height: 20px;
+  font-size: 0.82rem;
+}
+#board #projectArea #projectContent .todoBottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#addProjectModal {
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  border-radius: 10px;
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1) 250ms;
+  width: 400px;
+  background: #d8a7b1;
+  color: white;
+  outline: 1px solid rgba(163, 163, 163, 0.582);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: rgb(52, 5, 93);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(69, 13, 92, 1) 0%,
+    rgba(77, 15, 94, 1) 26%,
+    rgba(107, 19, 88, 1) 45%,
+    rgba(107, 19, 88, 1) 75%,
+    rgba(89, 18, 97, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(69, 13, 92, 1) 0%,
+    rgba(77, 15, 94, 1) 26%,
+    rgba(107, 19, 88, 1) 45%,
+    rgba(107, 19, 88, 1) 75%,
+    rgba(89, 18, 97, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(69, 13, 92, 1) 0%,
+    rgba(77, 15, 94, 1) 26%,
+    rgba(107, 19, 88, 1) 45%,
+    rgba(107, 19, 88, 1) 75%,
+    rgba(89, 18, 97, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#34055d",endColorstr="#591261",GradientType=1);
+}
+
+#addProjectModal form {
+  display: flex;
+  flex-direction: column;
+}
+#addProjectModal form .input-box {
+  padding: 5px 30px;
+  width: calc(30% - 10px);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#addProjectModal form .input-box input {
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1.5px rgb(219, 219, 219) solid;
+  border-radius: 5px;
+
+  background-color: #41106c;
+  color: white;
+  /* border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out; */
+}
+#addProjectModal form .input-box input:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+  transition: all ease-in-out 0.25s;
+  box-shadow: 0px 0px 5px 5px rgba(172, 172, 172, 0.1);
+}
+#addProjectModal form .input-box input:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 1.5px rgb(156, 156, 255) solid;
+}
+#addProjectModal form .input-box label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 20vw;
+  letter-spacing: 1.5px;
+  margin-bottom: 2px;
+}
+#addProjectModal form .submitBtnDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+#addProjectModal form .submitBtnDiv button {
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  border: 1px rgba(155, 155, 155, 0.5) solid;
+  padding: 10px 35px;
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px rgba(52, 5, 93, 1);
+  border-radius: 10px;
+  display: block;
+}
+#addProjectModal form .submitBtnDiv #cancelBtn {
+  background-image: linear-gradient(
+    to right,
+    #aa076b 0%,
+    #61045f 51%,
+    #aa076b 100%
+  );
+}
+#addProjectModal form .submitBtnDiv #cancelBtn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#addProjectModal form .submitBtnDiv #submitBtn {
+  background-image: linear-gradient(
+    to right,
+    #642b73 0%,
+    #c6426e 51%,
+    #642b73 100%
+  );
+}
+
+#addProjectModal form .submitBtnDiv #submitBtn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+#addProjectModal form #selectInputBox {
+  width: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #41106c;
+  outline: 1.5px rgb(156, 156, 255) solid;
+  overflow: hidden;
+  border-radius: 0.25em;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#addProjectModal form #selectInputBox select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-color: #41106c;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+#addProjectModal form #selectInputBox:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#addProjectModal form #selectInputBox select::-ms-expand {
+  display: none;
+}
+/* #addProjectModal form #selectInputBox::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #2b2e2e;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+} */
+
+#footer .footerContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 

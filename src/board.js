@@ -1,27 +1,28 @@
+import projectContentProjects from './projects';
+
 const board = document.createElement('div');
 board.id = 'board';
 
 const project = document.createElement('div');
 const search = document.createElement('div');
-const todoArea = document.createElement('div');
+const projectArea = document.createElement('div');
 project.id = 'project';
 search.id = 'search';
-todoArea.id = 'todoArea';
+projectArea.id = 'projectArea';
 
 const projectContent = document.createElement('div');
 const title = document.createElement('div');
 const rightSide = document.createElement('div');
 const more = document.createElement('i');
 const newCategoryButton = document.createElement('button');
-newCategoryButton.textContent = 'New Category';
+newCategoryButton.textContent = 'New Project';
+newCategoryButton.id = 'addProjectBtn';
 
 more.classList.add('fa-solid', 'fa-ellipsis-vertical');
 
 title.textContent = 'Corporate website for ULT Algency';
 title.id = 'title';
 rightSide.id = 'rightSide';
-
-todoArea.textContent = 'todoArea';
 
 projectContent.id = 'projectContent';
 
@@ -76,8 +77,10 @@ projectContent.appendChild(rightSide);
 search.appendChild(searchContent);
 project.appendChild(projectContent);
 
+projectArea.appendChild(projectContentProjects);
+
 board.appendChild(project);
 board.appendChild(search);
-board.appendChild(todoArea);
+board.appendChild(projectArea);
 
 export default board;
