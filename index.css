@@ -178,7 +178,7 @@ table {
 }
 
 .container nav {
-  height: 50px;
+  height: 60px;
   grid-area: nv;
   display: flex;
   justify-content: space-between;
@@ -187,7 +187,6 @@ table {
 }
 
 .container main {
-  background-color: blue;
   grid-area: mn;
 }
 .container .calendar {
@@ -228,7 +227,7 @@ table {
 }
 
 .container nav .navbar-right {
-  width: 250px;
+  width: 230px;
   display: flex;
   height: 100%;
   align-items: center;
@@ -260,21 +259,126 @@ table {
   border: 0.5px white solid;
   background-image: url(deae920cda7d68baea7d.jpe);
 }
-/* .container nav .navbar-middle .navbarMiddle1 {
+
+#board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0fr 0fr 1fr;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+#board #project {
+  width: 100%;
+  height: 100px;
+}
+#board #project #projectContent {
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+#board #project #projectContent #title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#board #project #projectContent #rightSide {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+#board #project #projectContent #rightSide button {
+  background-color: rgba(255, 87, 97, 1);
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 50px rgba(255, 87, 97, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#board #project #projectContent #rightSide button:hover {
+  background-color: rgba(255, 87, 97, 0.8);
+}
+#board #search {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board #search #searchContent {
+  border-radius: 10px;
+  background-color: #41106c;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
   padding: 0 20px;
+  color: white;
+}
+#board #search #searchContent .filters {
   display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 5 0%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+#board #search #searchContent .filters:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#board #search #searchContent .filters .quickFilters {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgb(172, 172, 172);
+}
+#board #search #searchContent .filters .filtersMore {
+  font-size: 0.9rem;
+}
+
+#board #search #searchContent #searchBar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
   gap: 10px;
 }
-.container nav .navbar-middle .navbarMiddle2 {
-  display: flex;
-  gap: 10px;
+#board #search #searchContent #searchBar #searchBarInput {
+  width: 100%;
+  background-color: #41106c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
-.container nav .navbar-middle .navbarMiddle3 {
-  display: flex;
-  gap: 10px;
+#board #search #searchContent #searchBar #searchBarInput:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
-.container nav .navbar-middle .navbarMiddle4 {
-  display: flex;
-  gap: 10px;
-} */
+
+#board #search #searchContent .searchRightSide {
+  color: rgba(255, 87, 97, 1);
+  font-size: 1.8rem;
+  margin-left: auto;
+}
+#board #search #searchContent .searchRightSide :hover {
+  cursor: pointer;
+}
+#board #todoArea {
+  background-color: green;
+}
 
