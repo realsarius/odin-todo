@@ -62,8 +62,16 @@ document.querySelector('#cancelBtn').addEventListener('click', (e) => {
 document.querySelector('#projectCancelBtn').addEventListener('click', (e) => {
   e.preventDefault();
   addProjectModal.close();
+  addTodoModal.close();
 });
 
+document.querySelector('#projectSubmitBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  addTodoModal.close();
+  addProjectModal.close();
+});
+
+let addTodoBtns = document.querySelectorAll('.addTodoModalBtn');
 document.querySelector('#projectSubmitBtn').addEventListener('click', (e) => {
   e.preventDefault();
   const newProject = document.createElement('div');
@@ -74,7 +82,11 @@ document.querySelector('#projectSubmitBtn').addEventListener('click', (e) => {
   const newProjectAddBtnA = document.createElement('a');
   const projectTitleInput = document.querySelector('#projectTitle').value;
   newProjectTodo.id = `${projectTitleInput}`;
-  newProjectTitle.textContent = projectTitleInput;
+  if (!projectTitleInput === '') {
+    newProjectTitle.textContent = projectTitleInput;
+  } else {
+    newProjectTitle.textContent = 'No Project Title';
+  }
   newProjectAddBtn.classList.add('fa-solid', 'fa-circle-plus');
 
   newProjectAddBtnA.appendChild(newProjectAddBtn);
@@ -95,6 +107,15 @@ document.querySelector('#projectSubmitBtn').addEventListener('click', (e) => {
   projectContentProjects.appendChild(newProject);
 
   projectArea.appendChild(projectContentProjects);
+  document.querySelector('#projectTitle').value = '';
+  addTodoBtns = document.querySelectorAll('#addTodoModalBtn');
+  addTodoBtns.forEach((btn) => {
+    console.log(btn);
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      addTodoModal.showModal();
+    });
+  });
   addProjectModal.close();
 });
 
@@ -146,6 +167,8 @@ document.querySelector('#submitBtn').addEventListener('click', (e) => {
   todo1.appendChild(tododesc);
   todo1.appendChild(todobottom);
 
+  // document.querySelector(`${document.querySelector('#projectTitle').value}`)
+
   todo.appendChild(todo1);
   addTodoModal.close();
 });
@@ -158,10 +181,6 @@ document.querySelector('#submitBtn').addEventListener('click', (e) => {
 //     this[i].addEventListener(event_name, callback, useCapture);
 //   }
 // };
-
-// document.querySelectorAll('.addTodoModalBtn').forEach((btn) => {
-//   console.log(btn);
-//   btn.addEventListener('click', (e) => {
-//     alert(e);
-//   });
-// });
+addTodoBtns.forEach((btn) => {
+  console.log(btn);
+});

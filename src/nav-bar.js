@@ -73,7 +73,7 @@ navbarRight2ProfileMore.classList.add('fa-solid', 'fa-angle-down');
 navbarRight2ProfileInfo.className = 'profile-info';
 
 navbarRight2ProfileInfoName.textContent = 'realsarius';
-navbarRight2ProfileInfoRole.textContent = 'Web Developer';
+navbarRight2ProfileInfoRole.textContent = 'Web "Developer"';
 navbarRight2ProfileInfoName.className = 'name';
 navbarRight2ProfileInfoRole.className = 'role';
 
