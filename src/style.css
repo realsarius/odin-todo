@@ -283,7 +283,8 @@ table {
   align-items: center;
   margin: 0 20px;
 }
-#board #project #projectContent #title {
+#board #project #projectContent #title,
+#board #project #projectContent #somethingTitle {
   font-size: 1.3rem;
   font-weight: 700;
 }
@@ -459,10 +460,25 @@ table {
   line-height: 20px;
   font-size: 0.82rem;
 }
+#board #projectArea #projectContent .todo .todoDueDate,
+#board #projectArea #projectContent .todo .todoPriority {
+  font-size: 0.82rem;
+}
+
 #board #projectArea #projectContent .todoBottom {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+}
+
+#board #projectArea #projectContent .todoBottom .todobottomMoreA {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+#board #projectArea #projectContent .todoBottom .todobottomMoreA:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #addTodoModal,

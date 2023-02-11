@@ -1,9 +1,14 @@
 import todo from './todos';
 
-// const createProject = () => {};
-
 const projectContentProjects = document.createElement('div');
 projectContentProjects.id = 'projectContent';
+
+const newProject = document.createElement('div');
+const newProjectTitle = document.createElement('h1');
+const newProjectAddBtn = document.createElement('i');
+const newProjectTodo = document.createElement('div');
+const newProjectFlex = document.createElement('div');
+const newProjectAddBtnA = document.createElement('a');
 
 const project1 = document.createElement('div');
 const project2 = document.createElement('div');
@@ -20,6 +25,7 @@ project1AddBtn.classList.add('fa-solid', 'fa-circle-plus');
 
 project1AddBtnA.appendChild(project1AddBtn);
 project1AddBtnA.id = 'addTodoModalBtn';
+project1AddBtnA.className = 'addTodoModalBtn';
 
 project1Flex.appendChild(project1Title);
 project1Flex.appendChild(project1AddBtnA);
@@ -40,7 +46,16 @@ project2.textContent = 'project2';
 project3.textContent = 'project3';
 
 projectContentProjects.appendChild(project1);
-projectContentProjects.appendChild(project2);
-projectContentProjects.appendChild(project3);
+// projectContentProjects.appendChild(project2);
+// projectContentProjects.appendChild(project3);
 
-export default projectContentProjects;
+export {
+  projectContentProjects,
+  newProject,
+  newProjectTitle,
+  newProjectAddBtn,
+  newProjectTodo,
+  newProjectFlex,
+  newProjectAddBtnA,
+  todo,
+};

@@ -9,6 +9,8 @@ label1.textContent = 'Title';
 input1.setAttribute('type', 'text');
 input1.setAttribute('name', 'title');
 input1.setAttribute('id', 'title');
+input1.setAttribute('minlength', '2');
+input1.setAttribute('maxlength', '20');
 
 const inputBox2 = document.createElement('div');
 const label2 = document.createElement('label');
@@ -18,6 +20,8 @@ label2.textContent = 'Description';
 input2.setAttribute('type', 'text');
 input2.setAttribute('name', 'desc');
 input2.setAttribute('id', 'desc');
+input2.setAttribute('minlength', '2');
+input2.setAttribute('maxlength', '20');
 
 const inputBox3 = document.createElement('div');
 const label3 = document.createElement('label');
@@ -75,7 +79,7 @@ const submitBtn = document.createElement('button');
 const cancelBtn = document.createElement('button');
 cancelBtn.textContent = 'Cancel';
 cancelBtn.id = 'cancelBtn';
-submitBtn.textContent = 'Add Project';
+submitBtn.textContent = 'Add Todo';
 submitBtn.id = 'submitBtn';
 submitBtnDiv.className = 'submitBtnDiv';
 

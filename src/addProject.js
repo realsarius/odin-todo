@@ -4,11 +4,11 @@ const inputBox1 = document.createElement('div');
 const label1 = document.createElement('label');
 const input1 = document.createElement('input');
 addProjectModal.id = 'addProjectModal';
-label1.setAttribute('for', 'title');
+label1.setAttribute('for', 'projectTitle');
 label1.textContent = 'Project Title';
 input1.setAttribute('type', 'text');
 input1.setAttribute('name', 'title');
-input1.setAttribute('id', 'title');
+input1.setAttribute('id', 'projectTitle');
 
 inputBox1.className = 'input-box';
 inputBox1.appendChild(label1);

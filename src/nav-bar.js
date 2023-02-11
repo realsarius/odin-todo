@@ -72,7 +72,7 @@ navbarRight2ProfileMore.classList.add('fa-solid', 'fa-angle-down');
 
 navbarRight2ProfileInfo.className = 'profile-info';
 
-navbarRight2ProfileInfoName.textContent = 'Berkan Sözer';
+navbarRight2ProfileInfoName.textContent = 'realsarius';
 navbarRight2ProfileInfoRole.textContent = 'Web Developer';
 navbarRight2ProfileInfoName.className = 'name';
 navbarRight2ProfileInfoRole.className = 'role';
@@ -110,11 +110,11 @@ navbarMiddle1.addEventListener('click', () => {
   navbarMiddle2.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
 });
 
-navbarMiddle2.addEventListener('click', () => {
-  document.querySelector('#map').style.display = 'grid';
-  document.querySelector('#board').style.display = 'none';
-  navbarMiddle1.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
-  navbarMiddle2.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-});
+// navbarMiddle2.addEventListener('click', () => {
+//   document.querySelector('#map').style.display = 'grid';
+//   document.querySelector('#board').style.display = 'none';
+//   navbarMiddle1.style.backgroundColor = 'rgba(255, 255, 255, 0.0)';
+//   navbarMiddle2.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+// });
 
 export default navbar;
