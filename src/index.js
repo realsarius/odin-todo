@@ -11,6 +11,7 @@ import footer from './footer';
 import board from './board';
 import map from './map';
 
+import addTodoModal from './addTodo';
 import addProjectModal from './addProject';
 
 const root = document.querySelector('.root');
@@ -26,6 +27,7 @@ container.appendChild(main);
 container.appendChild(calendar);
 container.appendChild(footer);
 container.appendChild(addProjectModal);
+container.appendChild(addTodoModal);
 
 root.appendChild(container);
 document.querySelector('.navbarMiddle1').style.backgroundColor =
@@ -34,8 +36,20 @@ document.querySelector('.navbarMiddle1').style.boxShadow =
   '0 3px 0 #ff5761 inset';
 document.querySelector('#map').style.display = 'none';
 
+document.querySelector('#addTodoModalBtn').addEventListener('click', () => {
+  addTodoModal.showModal();
+});
+
 document.querySelector('#addProjectBtn').addEventListener('click', () => {
   addProjectModal.showModal();
 });
 
-document.getElementById('#priorityLabel').style.display = 'none';
+document.querySelector('#cancelBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  addTodoModal.close();
+});
+
+document.querySelector('#projectCancelBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  addProjectModal.close();
+});

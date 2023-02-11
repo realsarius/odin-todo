@@ -9,12 +9,33 @@ const project1 = document.createElement('div');
 const project2 = document.createElement('div');
 const project3 = document.createElement('div');
 
+const project1Title = document.createElement('h1');
+const project1AddBtn = document.createElement('i');
+const project1Todo = document.createElement('div');
+const project1Flex = document.createElement('div');
+const project1AddBtnA = document.createElement('a');
+project1Todo.id = 'project1Todo';
+project1Title.textContent = 'Project 1';
+project1AddBtn.classList.add('fa-solid', 'fa-circle-plus');
+
+project1AddBtnA.appendChild(project1AddBtn);
+project1AddBtnA.id = 'addTodoModalBtn';
+
+project1Flex.appendChild(project1Title);
+project1Flex.appendChild(project1AddBtnA);
+project1Flex.className = 'project1Flex';
+
+project1.appendChild(project1Flex);
+project1.appendChild(project1Todo);
+
+project1Todo.appendChild(todo);
+
 project1.id = 'project1';
 project2.id = 'project2';
 project3.id = 'project3';
 
-project1.textContent = 'Project 1';
-project1.appendChild(todo);
+// project1.textContent = 'Project 1';
+// project1.appendChild(todo);
 project2.textContent = 'project2';
 project3.textContent = 'project3';
 
