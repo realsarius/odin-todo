@@ -9,8 +9,10 @@ label1.textContent = 'Title';
 input1.setAttribute('type', 'text');
 input1.setAttribute('name', 'title');
 input1.setAttribute('id', 'title');
-input1.setAttribute('minlength', '2');
+input1.setAttribute('minlength', '3');
 input1.setAttribute('maxlength', '20');
+const titleError = document.createElement('div');
+titleError.className = 'titleError';
 
 const inputBox2 = document.createElement('div');
 const label2 = document.createElement('label');
@@ -61,6 +63,7 @@ input4.appendChild(option4);
 inputBox1.className = 'input-box';
 inputBox1.appendChild(label1);
 inputBox1.appendChild(input1);
+inputBox1.appendChild(titleError);
 
 inputBox2.className = 'input-box';
 inputBox2.appendChild(label2);
