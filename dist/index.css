@@ -173,7 +173,7 @@ table {
   grid-template-rows: 0fr 1fr 0fr;
   grid-template-areas:
     'nv nv'
-    'mn cl'
+    'mn mn' /* mn fl */
     'ft ft';
 }
 
@@ -394,10 +394,11 @@ table {
 }
 #board #projectArea {
   color: white;
+  width: 100%;
 }
 
 #board #projectArea #projectContent {
-  width: 63vw;
+  width: 95vw;
   padding: 20px;
   height: 58vh;
   display: grid;
