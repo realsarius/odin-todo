@@ -127,7 +127,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -162,7 +162,7 @@ table {
     rgba(89, 18, 97, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#34055d",endColorstr="#591261",GradientType=1);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -172,9 +172,9 @@ table {
   grid-template-columns: 3fr 1.3fr;
   grid-template-rows: 0fr 1fr 0fr;
   grid-template-areas:
-    'nv nv'
-    'mn mn' /* mn fl */
-    'ft ft';
+    "nv nv"
+    "mn mn" /* mn fl */
+    "ft ft";
 }
 
 .container nav {
@@ -274,7 +274,7 @@ table {
   display: grid;
   grid-template-rows: 0fr 0fr 1fr;
   background-color: rgba(255, 255, 255, 0.1);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #board #project {
@@ -492,7 +492,7 @@ table {
 #addTodoModal,
 #addProjectModal {
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border: none;
   border-radius: 10px;
   transition: cubic-bezier(0.25, 0.1, 0.25, 1) 250ms;
@@ -572,7 +572,7 @@ table {
   display: block;
   font-size: 0.8rem;
   font-weight: 500;
-  width: 20vw;
+
   letter-spacing: 1.5px;
   margin-bottom: 2px;
 }
@@ -738,5 +738,9 @@ table {
   border-radius: 5px;
   box-sizing: border-box;
   padding: 0.5em;
+}
+
+#projectTitle {
+  color: red;
 }
 

@@ -122,7 +122,7 @@ document.querySelector('#projectSubmitBtn').addEventListener('click', (e) => {
 
     newProjectAddBtnA.appendChild(newProjectAddBtn);
     newProjectAddBtnA.id = 'addTodoModalBtn';
-    newProjectAddBtnA.className = 'addTodoModalBtn';
+    newProjectAddBtnA.className = `${projectTitleInput}Btn`;
 
     newProjectFlex.appendChild(newProjectTitle);
     newProjectFlex.appendChild(newProjectAddBtnA);
